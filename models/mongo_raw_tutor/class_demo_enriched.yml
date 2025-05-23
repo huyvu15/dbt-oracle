@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: MONGO_RAW_TUTOR
+    # database: YOUR_DATABASE_NAME       # optional nếu cần
+    schema: MONGO_RAW_TUTOR
+    tables:
+      - name: CLASS_DEMO_ENRICHED
+        description: "Bảng chứa dữ liệu class demo raw enrich từ Mongo"
+        columns:
+          - name: ID
+            description: "Primary key, UUID của bản ghi"
+            data_type: VARCHAR2(50)
+          - name: CONTENT
+            description: "Dữ liệu JSON gốc dạng text"
+            data_type: CLOB
+          - name: INGESTED_AT
+            description: "Thời điểm ingest vào hệ thống"
+            data_type: TIMESTAMP

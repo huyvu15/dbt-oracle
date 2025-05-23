@@ -1,0 +1,12 @@
+class_demo_project:
+  target: dev
+  outputs:
+    dev:
+      type: oracle
+      host: "{{ env_var('DBT_ORACLE_HOST') }}"
+      user: "{{ env_var('DBT_ORACLE_USER') }}"
+      password: "{{ env_var('DBT_ORACLE_PASSWORD') }}"
+      port: "{{ env_var('DBT_ORACLE_PORT') }}"
+      service: "{{ env_var('DBT_ORACLE_SERVICE') }}"
+      schema: "{{ env_var('DBT_ORACLE_SCHEMA') }}"
+      protocol: tcp
